@@ -1,2 +1,12 @@
 @import "tailwindcss";
 @plugin "daisyui";
+
+@font-face {
+    font-family: 'fonts';
+    src: url('./assets/fonts/IRANYekanRegular.ttf'), url('./assets/fonts/IRANYekanMedium.ttf'), url('./assets/fonts/IRANYekanBold.ttf');
+}
+
+* {
+    font-family: 'fonts';
+    scrollbar-width: none;
+}

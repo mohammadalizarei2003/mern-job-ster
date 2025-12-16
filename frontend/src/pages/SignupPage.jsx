@@ -1,58 +1,66 @@
 import { BsArrowLeft, BsGithub, BsGoogle } from 'react-icons/bs'
+import { FaUser, FaUserGraduate } from "react-icons/fa";
+
 import authImage from '../assets/auth_image.svg'
 import { Link } from 'react-router-dom'
+import { CustomInput } from '../components'
 
 
 const SignupPage = () => {
-    return <section className="max-w-3xl w-full p-5 bg-base-200 rounded-2xl shadow-2xl shadow-primary/20 border border-primary/20 min-h-96 grid lg:grid-cols-2 md:lg:grid-cols-2 sm:grid-cols-2 grid-cols-1 items-center gap-5">
-        <div className="w-full h-full lg:flex md:md sm:flex items-center hidden justify-center">
-            <img src={authImage} alt="" className='size-80 select-none' />
+    return <section className="grid lg:grid-cols-2 md:lg:grid-cols-2 sm:grid-cols-2 grid-cols-1 gap-4 max-w-4xl w-full mx-auto bg-base-200 min-h-96 rounded-3xl border border-primary/20 shadow-2xl hover:border-primary/40 p-5 transition-all duration-300">
+
+        <div className='col-span-1  w-full h-full lg:flex md:lg:flex md:flex sm:flex hidden items-center justify-center'>
+            <img src={authImage} className='size-80' alt="auth-image" />
         </div>
 
-        <div className='w-full h-full space-y-4 flex flex-col'>
-            <h2 className='text-xl font-bold'>Signin</h2>
-            <p className='text-left text-sm'>Lorem ipsum dolor sit amet.</p>
+        <div className='w-full space-y-5'>
+            <h2 className='text-2xl font-bold'>Signup</h2>
+            <p className='text-sm'>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
 
-            <form className='grid gap-2'>
-                <fieldset className="fieldset">
-                    <legend className="fieldset-legend">Email</legend>
-                    <input type="email" className="input input-md border shadow-none w-full rounded-xl border-primary/20 focus:border-primary/40 bg-base-100 focus:outline-0 transition-all" placeholder="demo@gmail.com" />
-                    {/* <p className="label">You can edit page title later on from settings</p> */}
-                </fieldset>
-                
-                <fieldset className="fieldset">
-                    <legend className="fieldset-legend flex items-center justify-between w-full">
-                        <span>Password</span>
-                        <Link to='/forgot-password' className='link link-primary'>Forgot password</Link>
-                        </legend>
-                    <input type="password" className="input input-md border shadow-none w-full rounded-xl border-primary/20 focus:border-primary/40 bg-base-100 focus:outline-0 transition-all" placeholder="*******" />
-                    {/* <p className="label">You can edit page title later on from settings</p> */}
-                </fieldset>
-
-                <button className="btn btn-primary btn-md btn-block my-5 rounded-xl shadow-none border-0">Primary</button>
-                <Link to='/' className='text-sm link link-primary'>
-                    <span>Don't have an account ? Signup</span>
-                </Link>
-                
-                <div className="divider">Our</div>
-                <div className='grid grid-cols-2 gap-2'>
-                    <button className='btn btn-outline rounded-xl outline-none border-primary/20'>
-                        <BsGoogle className='size-4' />
-                        <span>Goggle</span>
-                    </button>
-                    <button className='btn btn-outline rounded-xl outline-none border-primary/20'>
-                        <BsGithub className='size-4' />
-                        <span>Github</span>
-                    </button>
+            <div className='grid grid-cols-2 gap-4'>
+                {/*  */}
+                <div className="col-span-2 grid grid-cols-2 gap-2 items-center">
+                    <div className='w-full h-24 rounded-xl border border-primary/20 bg-base-100 flex flex-col items-center justify-center gap-4'>
+                        <FaUser className='size-8' />
+                        <span className='text-sm font-bold'>Freelancer</span>
+                    </div>
+                    <div className='w-full h-24 rounded-xl border border-primary/20 bg-base-100 flex flex-col items-center justify-center gap-4'>
+                        <FaUserGraduate className='size-8' />
+                        <span className='text-sm font-bold'>Recruiter</span>
+                    </div>
                 </div>
-            </form>
+                <CustomInput />
+                <CustomInput />
+                <CustomInput className="col-span-2" />
+                <CustomInput />
+                <CustomInput />
+                <div className='col-span-2 flex items-center justify-between gap-5 my-2'>
+                    <Link to='/auth' className='link link-primary text-sm'>Signin</Link>
+                </div>
+                <button className='btn col-span-2 btn-primary btn-md border-none shadow-none rounded-xl uppercase text-sm'>signin</button>
+            </div>
 
-            <Link to='/' className='flex items-center justify-center link link-primary text-sm mt-4 gap-2'>
-                <BsArrowLeft className='size-4' />
-                <span>Back to landing</span>
-            </Link>
+            <div className="divider">Our</div>
+            <div className='grid grid-cols-2 gap-2'>
+                <button className='btn btn-outline btn-primary rounded-xl btn-lg text-sm'>
+                    <BsGoogle className='size-4' />
+                    <span>Goggle</span>
+                </button>
+                <button className='btn btn-outline btn-primary rounded-xl btn-lg text-sm'>
+                    <BsGithub className='size-4' />
+                    <span>Github</span>
+                </button>
+            </div>
+
+            <div className='text-center mt-10'>
+                <Link to='/' className='text-sm link link-primary flex items-center justify-center gap-2'>
+                    <BsArrowLeft className='size-4' />
+                    <span>Back to landing</span>
+                </Link>
+            </div>
 
         </div>
+
     </section>
 }
 

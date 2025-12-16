@@ -2,7 +2,7 @@ import { RouterProvider, createBrowserRouter } from 'react-router-dom'
 import { AuthLayout, RootLayout } from './layouts'
 import { LandingPage, SigninPage, SignupPage } from './pages'
 
-
+// 
 
 const router = createBrowserRouter([
   {
@@ -16,7 +16,7 @@ const router = createBrowserRouter([
     ]
   },
   {
-    path: 'auth',
+    path: 'auth/',
     element: <AuthLayout />,
     children: [
       {
@@ -24,7 +24,7 @@ const router = createBrowserRouter([
         element: <SigninPage />
       },
       {
-        path: '/signup',
+        path: 'signup',
         element: <SignupPage />
       }
     ]
