@@ -1,9 +1,9 @@
 import { BsArrowLeft, BsGithub, BsGoogle } from 'react-icons/bs'
 import { FaUser, FaUserGraduate } from "react-icons/fa";
 
-import authImage from '../assets/auth_image.svg'
+import authImage from '../../assets/auth_image.svg'
 import { Link } from 'react-router-dom'
-import { CustomInput } from '../components'
+import { CustomInput } from '../../components'
 
 
 const SignupPage = () => {

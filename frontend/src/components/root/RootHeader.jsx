@@ -4,7 +4,7 @@ import { LuMoon, LuSun, LuUser } from 'react-icons/lu'
 const RootHeader = () => {
     return <header className="sticky top-2 left-0 right-0 w-full px-4 py-2 bg-base-200/80 shadow-lg rounded-xl border border-primary/20 backdrop-blur-lg mb-5 flex items-center justify-between gap-4 z-10">
         <div className="flex items-center gap-4">
-            <h1 className="text-xl font-bold"><span className="text-primary">Job</span> Ster</h1>
+            <Link to='/' className="text-xl font-bold"><span className="text-primary">Job</span> Ster</Link>
             <ul className="p-0 menu menu-horizontal bg-none rounded-box space-x-2">
                 <li className="">
                     <Link to='/jobs' className='bg-none rounded-xl hover:bg-base-100 hover:text-primary transition-all duration-300'>Jobs</Link>

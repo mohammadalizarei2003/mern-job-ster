@@ -1,6 +1,6 @@
 import { RouterProvider, createBrowserRouter } from 'react-router-dom'
 import { AuthLayout, RootLayout } from './layouts'
-import { LandingPage, SigninPage, SignupPage } from './pages'
+import { JobsPage, LandingPage, SigninPage, SignupPage } from './pages'
 
 // 
 
@@ -12,7 +12,11 @@ const router = createBrowserRouter([
       {
         index: true,
         element: <LandingPage />
-      }
+      },
+      {
+        path: 'jobs',
+        element: <JobsPage />
+      },
     ]
   },
   {
@@ -28,6 +32,10 @@ const router = createBrowserRouter([
         element: <SignupPage />
       }
     ]
+  },
+  {
+    path: '*',
+    element: <h1 className='text-2xl text-center my-20 text-warning'>Page not found</h1>
   }
 ])
 
